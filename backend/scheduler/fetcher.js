@@ -21,7 +21,8 @@ const updateActiveContractsList = async () => {
             "Origin": "https://www.mcxindia.com",
             "Referer": "https://www.mcxindia.com/market-data/option-chain",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-            "X-Requested-With": "XMLHttpRequest"
+            "X-Requested-With": "XMLHttpRequest",
+            "Cookie": "ASP.NET_SessionId=k1gbpqwmt15ae1g4bf4wblxy"
         };
         
         const response = await axios.get(url, { headers });
@@ -78,7 +79,8 @@ const fetchThirdPartyMCXData = async (symbol, expiryDate) => {
             "Origin": "https://www.mcxindia.com",
             "Referer": "https://www.mcxindia.com/market-data/option-chain",
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-            "X-Requested-With": "XMLHttpRequest"
+            "X-Requested-With": "XMLHttpRequest",
+            "Cookie": "ASP.NET_SessionId=k1gbpqwmt15ae1g4bf4wblxy"
         };
 
         const response = await axios.post(url, body, { headers });
