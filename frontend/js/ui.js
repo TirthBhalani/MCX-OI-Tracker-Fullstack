@@ -25,7 +25,7 @@ export const updateLatestDataPointDisplay = (latestData) => {
         dataContainer.innerHTML = `<p class="text-center text-gray-400">Waiting for live data...</p>`;
         return;
     }
-    const oiDiffColor = latestData.oiDifference >= 0 ? 'text-green-400' : 'text-red-400';
+    const oiDiffColor = latestData.oiDifference >= 0 ? 'text-red-400' : 'text-green-400';
     dataContainer.innerHTML = `
         <div class="text-center">
             <p class="text-sm text-gray-400">Live OI Difference</p>
@@ -46,7 +46,7 @@ export const renderChart = (dataPoints) => {
         type: 'line',
         data: { labels, datasets: [{
             label: 'CE OI - PE OI', data, borderWidth: 2, pointRadius: 1,
-            segment: { borderColor: ctx => (ctx.p1.raw >= 0 ? 'rgb(34, 197, 94)' : 'rgb(239, 68, 68)') }
+            segment: { borderColor: ctx => (ctx.p1.raw >= 0 ? 'rgb(239,68,68)' : 'rgb(34, 197, 94)') }
         }]},
         options: {
             responsive: true, maintainAspectRatio: false,

@@ -14,6 +14,7 @@ const updateActiveContractsList = async () => {
     console.log("Attempting to fetch and store fresh expiry data...");
     try {
         const url = "https://www.mcxindia.com/market-data/option-chain";
+        // const url = "https://twocompo.com/mcx.php";
         // Correct headers to fetch the HTML page
         const headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
@@ -72,6 +73,7 @@ const updateActiveContractsList = async () => {
 const fetchThirdPartyMCXData = async (symbol, expiryDate) => {
     try {
         const url = "https://www.mcxindia.com/backpage.aspx/GetOptionChain";
+        // const url = "https://twocompo.com/mcx.php";
         const body = { "Commodity": symbol, "Expiry": expiryDate };
         const headers = {
             "Accept": "application/json, text/javascript, */*; q=0.01",
